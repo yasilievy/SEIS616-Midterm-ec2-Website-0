@@ -1,7 +1,10 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 output "domain-name" {
-  value = aws_instance.app_server.public_dns
+  value = aws_instance.web.public_dns
 }
 
 output "application-url" {
-  value = "${aws_instance.app_server.public_dns}/index.php"
+  value = "${aws_instance.web.public_dns}/index.php"
 }
